@@ -53,12 +53,10 @@
           <div class="middle_container_right">
               <div class="content">
                   <div class="frame_content default">
-                     <h1>Renseigner une évaluation</h1>
-
-<p>Cette page permet à l'enseignant de renseigner le résultat d'une évaluation de l'élève.<br>Le niveau affiché par matière est une moyenne classe.<br>Le tri est par matière/classe<br><b>Faut-il le voir plus par élève que par matière/classe?</b></p>
+                     <h1>Vos évaluations</h1>
 
 
-
+<h3>Filtre</h3>
 
 <br/>
 <table>
@@ -66,7 +64,7 @@
     <tr>
     <form>
       <select style="width:200px;">
-          <option>Classe 2A</option>
+          <option><span style="color:grey;">Sélectionner une classe...</span></option>
           <option>Classe 2B</option>
           <option>Classe 2C</option>
            <option>Classe 1A</option>
@@ -81,8 +79,8 @@
     </tr>
       <tr>
       <form>
-        <select style="width:200px; color:grey;">
-            <option >Selectionner un élève...</option>
+        <select style="width:200px;">
+            <option  style="color:grey;">Selectionner un élève...</option>
             <option>Jean Dupond</option>
             <option>Anne Bouvier</option>
             <option>...</option>
@@ -102,29 +100,31 @@
                   <thead>
                       <tr>
                           <th data-options="field:'date'">Date</th>
-                          <th data-options="field:'eval'">Matière</th>
-                          <th data-options="field:'autoeval'">Classe</th>
-                          <th data-options="field:'comment'">Commentaire</th>
+                          <th data-options="field:'comment'">Matière</th>
+                          <th data-options="field:'comment'">Classe</th>
                       </tr>
                   </thead>
                   <tbody>
                       <tr>
                           <td data-options="field:'date'">19 mars 2015</td>
-                          <td data-options="field:'eval'"><div style="color:green">Aquis</div></td>
-                          <td data-options="field:'autoeval'" ><div style="color:green">(Aquis)</div></td>
+                          <td data-options="field:'eval'"><div>Mathématiques</div></td>
+                          <td data-options="field:'autoeval'" ><div>(Aquis)</div></td>
+                          <td data-options="field:'comment'"></td>
                           <td data-options="field:'comment'"></td>
                       </tr>
                       <tr>
                           <td data-options="field:'date'">15 fevrier 2015</td>
-                          <td data-options="field:'eval'"><div style="color:red">Non aquis</div></td>
-                          <td data-options="field:'autoeval'"><div style="color:green">(Aquis)</div></td>
+                          <td data-options="field:'eval'"><div>Non aquis</div></td>
+                          <td data-options="field:'autoeval'"><div>(Aquis)</div></td>
+                          <td data-options="field:'comment'"></td>
                           <td data-options="field:'comment'"></td>
                       </tr>
                       <tr>
                           <td data-options="field:'date'">21 janvier 2015</td>
-                          <td data-options="field:'eval'"><div style="color:red">Non aquis</div></td>
-                          <td data-options="field:'autoeval'" ><div style="color:red">(Non aquis)</div></td>
+                          <td data-options="field:'eval'"><div>Non aquis</div></td>
+                          <td data-options="field:'autoeval'" ><div>(Non aquis)</div></td>
                           <td data-options="field:'comment'">Revoir le chapitre 1</td>
+                          <td data-options="field:'comment'"></td>
                       </tr>
                   </tbody>
               </table>
@@ -189,7 +189,7 @@
                   </div>
              </div>
           </div>
-
+<!--
           <div class="push-float"></div>
     </div>
    <div class="news_letter">
@@ -197,7 +197,7 @@
    </div>
 
   <div class="border_bottom"></div>
-
+-->
 
 
 <div id="popup1" class="popup_block">
