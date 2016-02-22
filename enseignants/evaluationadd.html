@@ -45,44 +45,41 @@
           <div class="middle_container_right">
               <div class="content">
                   <div class="frame_content default">
-                     <h1>Ajouter une évaluation</h1>
+                     <h1>Ajouter une évaluation pour plusieurs élèves</h1>
                      
 
 
 
 
 
-                     <form style="margin:auto;" action="eleves/index.html" >
-                      <fieldset style="width:600px;margin:auto;"><legend>Cursus concernés</legend>
-                      <table style="width:100%;;border:0px">
-                      <tr><td style="width:30%">Cursus</td><td style="width:70%">
-                        <select name="sometext" Style="width:200px;">
-                          <option>Technologique</option>
-                          <option>Lettre</option>
-                          <option>Science</option>
-                          <option>Bio</option>
-                       </select>
-                      </td></tr>
-                      <tr><td style="width:30%">Niveau</td><td style="width:70%">
-                        <select name="sometext"  Style="width:200px;">
-                            <option>Seconde</option>
-                            <option>Première</option>
-                            <option>Terminal</option>
-                         </select>
-                      </td></tr>
+                     <form style="margin:auto;" action="eleves/index.html">
+                      <fieldset style="width:600px;margin:10px;padding:10px;"><legend>&nbsp;&nbsp;Classe concernés&nbsp;&nbsp;</legend><br>
+                      <table style="width:100%;border:0px;">
                       <tr><td style="width:30%">Classe</td><td style="width:70%">
-                        <select name="sometext"  Style="width:200px;">
-                          <option>Classe A</option>
-                          <option>Classe B</option>
-                          <option>Classe C</option>
+                        <select name="sometext" Style="width:200px;">
+                          <optgroup label="Terminale">
+                          <option>Terminale A STMG</option>
+                          <option>Terminale B ES</option>
+                          <option>Terminale B L</option>
+                          </optgroup>
+                          <optgroup label="Première">
+                          <option>Première A STMG</option>
+                          <option>Première B S</option>
+                          <option>Première C ES</option>
+                          </optgroup>
+                          <optgroup label="Seconde">
+                          <option>Seconde A STMG</option>
+                          <option>Seconde B S</option>
+                          <option>Seconde B L</option>
+                          </optgroup>
                        </select>
                       </td></tr>
-                      </table>
+                      </table><br>
                       </fieldset>
-
-                       <fieldset style="width:600px;margin:auto;"><legend>Evaluation à ajouter</legend>
-                      <table style="width:100%;;border:0px">
-                      <tr><td style="width:30%">Matière (parent)</td><td style="width:70%">
+<br>
+                       <fieldset style="width:600px;margin:10px;padding:10px;"><legend>&nbsp;&nbsp;Evaluation à ajouter&nbsp;&nbsp;</legend>
+                      <table style="width:100%;border:0px;padding:10px;">
+                      <tr><td style="width:30%">Matière</td><td style="width:70%">
                         <select name="sometext"  Style="width:200px;">
                           <option>Mathématique</option>
                           <option>Français</option>
@@ -91,14 +88,26 @@
                           <option>Sport</option>
                        </select>
                       </td></tr>
-                      <tr><td style="width:30%">Nom</td><td style="width:70%"><input type="text" value="Savoir diviser un nombre premier"  Style="width:200px;"/></td></tr>
-                      <tr><td style="width:30%">Date</td><td style="width:70%"><input type="text" value="01/05/2015"  Style="width:200px;"/></td></tr>
+                      <tr><td style="width:30%">Capacité</td><td style="width:70%">
+                        <select name="sometext"  Style="width:200px;">
+                          <optgroup label="ANALYSER-RAISONNER">
+                            <option>Emettre une conjecture, une hypothèse</option>
+                            <option>Proposer une méthode de résolution, un protocole expérimental</option>
+                            <option>Analyser-raisonner</option>
+                            <option>Critiquer un résultat, argumenter</option>
+                          </optgroup>
+                          <optgroup label="REALISER">
+                             <option>...</option>
+                          </optgroup>
+                       </select>
+                      </td></tr>
+                      <tr><td style="width:30%">Date</td><td style="width:70%"><input type="text" value="27/05/2016"  Style="width:200px;"/></td>
+                      </tr>
                       
                       </table>
                       </fieldset>
                       <center><br/>
                                 <input type="submit" value="valider">
-                               <input type="submit" value="Annuler">
                             
                             </center>
                       </form>
