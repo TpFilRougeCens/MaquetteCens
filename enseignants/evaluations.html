@@ -97,43 +97,39 @@
 <br/>
 
 
+<table class="easyui-datagrid" style="height:110px;width:100%;"
+                      data-options="url:'datagrid_data.json',fitColumns:true,singleSelect:true">
+                  <thead>
+                      <tr>
+                          <th data-options="field:'date'">Date</th>
+                          <th data-options="field:'eval'">Matière</th>
+                          <th data-options="field:'autoeval'">Classe</th>
+                          <th data-options="field:'comment'">Commentaire</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td data-options="field:'date'">19 mars 2015</td>
+                          <td data-options="field:'eval'"><div style="color:green">Aquis</div></td>
+                          <td data-options="field:'autoeval'" ><div style="color:green">(Aquis)</div></td>
+                          <td data-options="field:'comment'"></td>
+                      </tr>
+                      <tr>
+                          <td data-options="field:'date'">15 fevrier 2015</td>
+                          <td data-options="field:'eval'"><div style="color:red">Non aquis</div></td>
+                          <td data-options="field:'autoeval'"><div style="color:green">(Aquis)</div></td>
+                          <td data-options="field:'comment'"></td>
+                      </tr>
+                      <tr>
+                          <td data-options="field:'date'">21 janvier 2015</td>
+                          <td data-options="field:'eval'"><div style="color:red">Non aquis</div></td>
+                          <td data-options="field:'autoeval'" ><div style="color:red">(Non aquis)</div></td>
+                          <td data-options="field:'comment'">Revoir le chapitre 1</td>
+                      </tr>
+                  </tbody>
+              </table>
 
-                      <div style="margin:20px 0;">
-        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="edit()">Editer</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="save()">Sauvegarder</a>
-        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="cancel()">Quitter</a>
-    </div>
-    <table id="tg" class="easyui-treegrid" title="Evaluations" style="width:100%;height:400px"
-            data-options="
-                iconCls: 'icon-ok',
-                rownumbers: true,
-                animate: true,
-                collapsible: true,
-                fitColumns: true,
-                url: 'treegrid_dataENS.json',
-                method: 'get',
-                idField: 'id',
-                treeField: 'competance',
-                showFooter: false
-            ">
-        <thead>
-            <tr>
-                <th data-options="field:'competance',width:180">Matières/Compétences</th>
-                <th data-options="field:'auto1',width:60,align:'center',editor:{
-                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">11/01<br>Auto-évaluation</th>
-                <th data-options="field:'eval1',width:60,align:'center',editor:{
-                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">11/01<br>Evaluation</th>
-                <th data-options="field:'auto2',width:60,align:'center',editor:{
-                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">12/01<br>Auto-évaluation</th>
-                <th data-options="field:'eval2',width:60,align:'center',editor:{
-                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">12/01<br>Evaluation</th>
-                <th data-options="field:'auto3',width:60,align:'center',editor:{
-                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">11/02<br>Auto-évaluation</th>
-                <th data-options="field:'eval3',width:60,align:'center',editor:{
-                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">11/02<br>Evaluation</th>
-            </tr>
-        </thead>
-    </table>
+
     <script type="text/javascript">
 
        var products = [
