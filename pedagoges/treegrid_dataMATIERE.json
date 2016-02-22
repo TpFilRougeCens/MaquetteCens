@@ -1,0 +1,17 @@
+{"total":9,"rows":[
+	{"id":11,"matiere":"Sciences et techno"},
+
+	{"id":21,"matiere":"Mathématiques"},
+
+	{"id":31,"matiere":"Physique"},
+
+	{"id":31,"matiere":"Français"},
+
+	{"id":31,"matiere":"Anglais"}
+
+
+
+
+],"footer":[
+	{"name":"Total Persons:","persons":24,"iconCls":"icon-sum"}
+]}

@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+  <title>PROTOTYPE CENS - ELEVES</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../templates/image/favicon.ico" />
+  <link rel="stylesheet" type="text/css" media="screen" href="../templates/css/style.css" />
+  <link rel="stylesheet" href="../templates/css/font-awesome.css">
+
+
+    <link rel="stylesheet" type="text/css" href="../themes/bootstrap/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../themes/icon.css">
+    <script type="text/javascript" src="../themes/jquery.min.js"></script>
+    <script type="text/javascript" src="../themes/jquery.easyui.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="middle_container">
+
+  <div class="block_top">
+
+    <a id="logo_cens_header" href="index.html" title="Centre éducatif Nantais Sportifs" >
+     <img src="../templates/image/logo.png" alt="Centre éducatif Nantais Sportifs" width="70" height="70" />
+    </a>
+
+    <div class="loggin">
+      <div style="float:right;">
+        <img src="../templates/image/profil.jpg" style="width:70px;height:70px">
+      </div>
+      <div style="float:left;vertical-align:middle;padding-top:20px;padding-right:20px;">
+         <b style="font-size:10pt;">Bonjour <u>Jean DUPONT</u></b><br/>
+         <a href="../profil.html"><i class="fa fa-user"></i> Profil &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </a>
+         <a href="#?w=500" rel="popup1" class="poplight"><i class="fa fa-sign-in"></i> Déconnexion</a>
+         <br/>
+      </div>
+    </div>
+  </div>
+
+   <div class="middle_container_content">
+
+          <div class="middle_container_left">
+               <div class="menu_left">
+                    <ul id="menu">
+                        <li>
+                         <a href="index.html" target="_self">MENU ÉLEVE</a>
+                        </li>
+                        <li>
+                         <a>Formation</a>
+                         <ul class="sub-nav">
+                         <li>
+                          <a href="index.html" target="_self">Accueil</a>
+                         </li>
+                          <li>
+                           <a href="term.html" target="_self">Consulter le LPC</a>
+                          </li>
+                          <li>
+                           <a  class="selected" href="autoevaluation.html" target="_self">Auto-évaluation</a>
+                          </li>
+                         </ul>
+                        </li>
+                   </ul>
+               </div>
+          </div>
+
+          <div class="middle_container_right">
+              <div class="content">
+                  <div class="frame_content default">
+                     <h1>Répondre à une auto-évaluation</h1>
+
+
+               <p>Cette page permet à l'élève de saisir une autoévaluation.<br\> Une auto-évaluation n'est visible qu'à la demande de l'enseignant.</p><br/>
+
+
+
+
+
+
+
+    <div style="margin:20px 0;">
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="edit()">Editer</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="save()">Sauvegarder</a>
+        <a href="javascript:void(0)" class="easyui-linkbutton" onclick="cancel()">Quitter</a>
+    </div>
+    <table id="tg" class="easyui-treegrid" title="Livret de compétences" style="width:100%;height:400px"
+            data-options="
+                iconCls: 'icon-ok',
+                rownumbers: true,
+                animate: true,
+                collapsible: true,
+                fitColumns: true,
+                url: 'treegrid_data2.json',
+                method: 'get',
+                idField: 'id',
+                treeField: 'competance',
+                showFooter: false
+            ">
+        <thead>
+            <tr>
+                <th data-options="field:'competance',width:180">Matières/Compétences</th>
+                <th data-options="field:'auto1',width:60,align:'center',editor:{
+                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">11/01<br>Auto-évaluation</th>
+                <th data-options="field:'eval1',width:60,align:'center',editor:{
+                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">11/01<br>Evaluation</th>
+                <th data-options="field:'auto2',width:60,align:'center',editor:{
+                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">12/01<br>Auto-évaluation</th>
+                <th data-options="field:'eval2',width:60,align:'center',editor:{
+                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">12/01<br>Evaluation</th>
+                <th data-options="field:'auto3',width:60,align:'center',editor:{
+                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">11/02<br>Auto-évaluation</th>
+                <th data-options="field:'eval3',width:60,align:'center',editor:{
+                    type:'combobox',options:{valueField:'productid',textField:'name',data:products}}">11/02<br>Evaluation</th>
+            </tr>
+        </thead>
+    </table>
+    <script type="text/javascript">
+
+       var products = [
+        {productid:'A',name:'A'},
+        {productid:'EVA',name:'EVA'},
+        {productid:'NA',name:'NA'}
+    ];
+
+        var editingId;
+        function edit(){
+
+            if (editingId != undefined){
+
+                $('#tg').treegrid('select', editingId);
+                return;
+            }
+            var row = $('#tg').treegrid('getSelected');
+            if (row){
+
+                editingId = row.id;
+                $('#tg').treegrid('beginEdit', editingId);
+            }
+        }
+        function save(){
+            if (editingId != undefined){
+                var t = $('#tg');
+                t.treegrid('endEdit', editingId);
+                editingId = undefined;
+                var persons = 0;
+                var rows = t.treegrid('getChildren');
+                for(var i=0; i<rows.length; i++){
+                    var p = parseInt(rows[i].persons);
+                    if (!isNaN(p)){
+                        persons += p;
+                    }
+                }
+                var frow = t.treegrid('getFooterRows')[0];
+                frow.persons = persons;
+                t.treegrid('reloadFooter');
+            }
+        }
+        function cancel(){
+            if (editingId != undefined){
+                $('#tg').treegrid('cancelEdit', editingId);
+                editingId = undefined;
+            }
+        }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+                  </div>
+             </div>
+          </div>
+
+          <div class="push-float"></div>
+    </div>
+   <div class="news_letter">
+      <p style="color:#fff;margin-left:20px;margin-top:0px;padding-top:10px;">Mentions légales &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Plan du site &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Support informatique &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Autre menu...</p>
+   </div>
+
+  <div class="border_bottom"></div>
+
+
+
+<div id="popup1" class="popup_block">
+    <h2>Sélectionner un profil</h2>
+    <ul>
+      <li><a href="../index.html"><b>Se déconnecter</b></a></li>
+      <li><a href="../eleves/index.html">Connexion Eleves</a></li>
+      <li><a href="../enseignants/index.html">Connexion enseignants</a></li>
+      <li><a href="../managers/index.html">Connexion Managers</a></li>
+      <li><a href="../pedagoges/index.html">Connexion Pedagogie et Direction</a></li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  //SCRIPT+JQUERY JUSTE POUR LE POPUP DE CONNEXION
+  //When you click on a link with class of poplight and the href starts with a #
+  $('a.poplight[href^=#]').click(function() {
+    var popID = $(this).attr('rel'); //Get Popup Name
+    var popURL = $(this).attr('href'); //Get Popup href to define size
+    //Pull Query & Variables from href URL
+    var query= popURL.split('?');
+    var dim= query[1].split('&');
+    var popWidth = dim[0].split('=')[1]; //Gets the first query string value
+
+    //Fade in the Popup and add close button
+    $('#' + popID).fadeIn().css({ 'width': Number( popWidth ) }).prepend('<a href="#" class="close"><img src="../templates/image/close_pop.png" class="btn_close" title="Close Window" alt="Close" /></a>');
+    //Define margin for center alignment (vertical + horizontal) - we add 80 to the height/width to accomodate for the padding + border width defined in the css
+    var popMargTop = ($('#' + popID).height() + 80) / 2;
+    var popMargLeft = ($('#' + popID).width() + 80) / 2;
+    //Apply Margin to Popup
+    $('#' + popID).css({
+      'margin-top' : -popMargTop,
+      'margin-left' : -popMargLeft
+    });
+    //Fade in Background
+    $('body').append('<div id="fade"></div>'); //Add the fade layer to bottom of the body tag.
+    $('#fade').css({'filter' : 'alpha(opacity=80)'}).fadeIn(); //Fade in the fade layer
+    return false;
+  });
+  //Close Popups and Fade Layer
+  $('a.close, #fade').live('click', function() { //When clicking on the close or fade layer...
+      $('#fade , .popup_block').fadeOut(function() {
+      $('#fade, a.close').remove();
+  }); //fade them both out
+    return false;
+  });
+});
+
+</script>
+
+
+</body>
+
+</html>

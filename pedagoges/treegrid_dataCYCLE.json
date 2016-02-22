@@ -1,0 +1,13 @@
+{"total":24,"rows":[
+
+
+	{"id":111,"cursus":"Generale","filiere":"S"},
+	{"id":112,"cursus":"Generale","filiere":"ES"},
+	{"id":114,"cursus":"Generale","filiere":"L"},
+	{"id":115,"cursus":"Technologique","filiere":"STG"},
+	{"id":117,"cursus":"Professionnel","filiere":"Commerce"},
+	{"id":118,"cursus":"Professionnel","filiere":"Commerce"}
+
+],"footer":[
+	{"name":"Total Persons:","persons":24,"iconCls":"icon-sum"}
+]}

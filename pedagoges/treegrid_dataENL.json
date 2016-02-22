@@ -1,0 +1,33 @@
+{"total":24,"rows":[
+
+
+	{"id":111,"competance":"Jean-Charle","auto1":"2sdA","auto2":"Technologique"},
+	{"id":112,"competance":"Marie","auto1":"2sdA","auto2":"Technologique"},
+	{"id":113,"competance":"Yohan","auto1":"TermC","auto2":"Technologique"},
+	{"id":114,"competance":"Charlie","auto1":"2sdA","auto2":"Technologique"},
+	{"id":115,"competance":"Tango","auto1":"2sdA","auto2":"Technologique"},
+	{"id":116,"competance":"Julie","auto1":"TermC","auto2":"Technologique"},
+	{"id":117,"competance":"Pierre","auto1":"TermC","auto2":"Technologique"},
+	{"id":118,"competance":"Carlo","auto1":"2sdA","auto2":"Technologique"},
+
+	{"id":121,"competance":"Jean-Charle","auto1":"2sdA","auto2":"Technologique"},
+	{"id":122,"competance":"Marie","auto1":"2sdA","auto2":"Technologique"},
+	{"id":123,"competance":"Yohan","auto1":"TermC","auto2":"Technologique"},
+	{"id":124,"competance":"Charlie","auto1":"2sdA","auto2":"Technologique"},
+	{"id":125,"competance":"Tango","auto1":"2sdA","auto2":"Technologique"},
+	{"id":126,"competance":"Julie","auto1":"TermC","auto2":"Technologique"},
+	{"id":127,"competance":"Pierre","auto1":"TermC","auto2":"Technologique"},
+	{"id":128,"competance":"Carlo","auto1":"2sdA","auto2":"Technologique"},
+
+	{"id":131,"competance":"Jean-Charle","auto1":"2sdA","auto2":"Technologique"},
+	{"id":132,"competance":"Marie","auto1":"2sdA","auto2":"Technologique"},
+	{"id":133,"competance":"Yohan","auto1":"TermC","auto2":"Technologique"},
+	{"id":134,"competance":"Charlie","auto1":"2sdA","auto2":"Technologique"},
+	{"id":135,"competance":"Tango","auto1":"2sdA","auto2":"Technologique"},
+	{"id":136,"competance":"Julie","auto1":"TermC","auto2":"Technologique"},
+	{"id":137,"competance":"Pierre","auto1":"TermC","auto2":"Technologique"},
+	{"id":138,"competance":"Carlo","auto1":"2sdA"}
+
+],"footer":[
+	{"name":"Total Persons:","persons":24,"iconCls":"icon-sum"}
+]}

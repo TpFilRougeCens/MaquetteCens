@@ -1,0 +1,36 @@
+{"total":24,"rows":[
+
+	{"id":11,"competance":"1er semestre","auto1":"","state":"closed"},
+{"id":12,"competance":"2sd semestre","auto1":"","state":"closed"},
+{"id":12,"competance":"3em semestre","auto1":"","state":"closed"},
+
+	{"id":111,"competance":"Jean-Charle","auto1":"Bien, continuer les efforts","_parentId":11},
+	{"id":112,"competance":"Marie","auto1":"Bien, continuer les efforts","_parentId":11},
+	{"id":113,"competance":"Yohan","auto1":"Très bon élève!","_parentId":11},
+	{"id":114,"competance":"Charlie","auto1":"Bien, continuer les efforts","_parentId":11},
+	{"id":115,"competance":"Tango","auto1":"Bien, continuer les efforts","_parentId":11},
+	{"id":116,"competance":"Julie","auto1":"Très bon élève!","_parentId":11},
+	{"id":117,"competance":"Pierre","auto1":"Très bon élève!","_parentId":11},
+	{"id":118,"competance":"Carlo","auto1":"Bien, continuer les efforts","_parentId":11},
+
+	{"id":121,"competance":"Jean-Charle","auto1":"Bien, continuer les efforts","_parentId":12},
+	{"id":122,"competance":"Marie","auto1":"Bien, continuer les efforts","_parentId":12},
+	{"id":123,"competance":"Yohan","auto1":"Très bon élève!","_parentId":12},
+	{"id":124,"competance":"Charlie","auto1":"Bien, continuer les efforts","_parentId":12},
+	{"id":125,"competance":"Tango","auto1":"Bien, continuer les efforts","_parentId":12},
+	{"id":126,"competance":"Julie","auto1":"Très bon élève!","_parentId":12},
+	{"id":127,"competance":"Pierre","auto1":"Très bon élève!","_parentId":12},
+	{"id":128,"competance":"Carlo","auto1":"Bien, continuer les efforts","_parentId":12},
+
+	{"id":131,"competance":"Jean-Charle","auto1":"Bien, continuer les efforts","_parentId":13},
+	{"id":132,"competance":"Marie","auto1":"Bien, continuer les efforts","_parentId":13},
+	{"id":133,"competance":"Yohan","auto1":"Très bon élève!","_parentId":13},
+	{"id":134,"competance":"Charlie","auto1":"Bien, continuer les efforts","_parentId":13},
+	{"id":135,"competance":"Tango","auto1":"Bien, continuer les efforts","_parentId":13},
+	{"id":136,"competance":"Julie","auto1":"Très bon élève!","_parentId":13},
+	{"id":137,"competance":"Pierre","auto1":"Très bon élève!","_parentId":13},
+	{"id":138,"competance":"Carlo","auto1":"Bien, continuer les efforts","_parentId":13}
+
+],"footer":[
+	{"name":"Total Persons:","persons":24,"iconCls":"icon-sum"}
+]}

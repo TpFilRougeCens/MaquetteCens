@@ -1,0 +1,18 @@
+{"total":9,"rows":[
+	{"id":11,"matiere":"Sciences et techno","competance":"METTRE EN ŒUVRE"},
+	{"id":12,"matiere":"Sciences et techno","competance":"UTILISER LES OUTILS"},
+	{"id":13,"matiere":"Sciences et techno","competance":"Se situer dans un environnement"},
+
+	{"id":21,"matiere":"Mathématiques","competance":"METTRE EN ŒUVRE"},
+	{"id":22,"matiere":"Mathématiques","competance":"UTILISER LES OUTILS"},
+	{"id":23,"matiere":"Mathématiques","competance":"Se situer dans un environnement"},
+
+	{"id":31,"matiere":"Français","competance":"METTRE EN ŒUVRE"},
+	{"id":32,"matiere":"Français","competance":"UTILISER LES OUTILS"},
+	{"id":33,"matiere":"Français","competance":"Se situer dans un environnement"}
+
+
+
+],"footer":[
+	{"name":"Total Persons:","persons":24,"iconCls":"icon-sum"}
+]}

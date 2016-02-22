@@ -1,0 +1,13 @@
+{"total":24,"rows":[
+	{"id":1,"competance":"Physiques","auto1":"","eval1":"","auto2":"","eval2":"","auto3":"","eval3":"","progress":20,"state":"open"},
+	{"id":11,"competance":"METTRE EN ŒUVRE","auto1":"<p style='color:green'>A</p>","eval1":"<p style='color:red'>NA</p>","auto2":"<p style='color:green'>A</p>","eval2":"EVA","auto3":"<p style='color:green'>A</p>","eval3":"<p style='color:green'>A</p>","progress":80,"_parentId":1},
+	{"id":12,"competance":"UTILISER LES OUTILS","auto1":"<p style='color:green'>A</p>","eval1":"<p style='color:red'>NA</p>","auto2":"<p style='color:green'>A</p>","eval2":"EVA","auto3":"<p style='color:green'>A</p>","eval3":"<p style='color:green'>A</p>","progress":60,"_parentId":1},
+	{"id":13,"competance":"Se situer dans un environnement","auto1":"<p style='color:green'>A</p>","eval1":"<p style='color:red'>NA</p>","auto2":"<p style='color:green'>A</p>","eval2":"EVA","auto3":"<p style='color:green'>A</p>","eval3":"<p style='color:green'>A</p>","progress":50,"_parentId":1},
+	
+	{"id":2,"competance":"Mathématique","auto1":"","eval1":"","auto2":"","eval2":"","auto3":"","eval3":"","progress":50,"state":"closed"},
+	{"id":21,"competance":"METTRE EN ŒUVRE","auto1":"<p style='color:red'>NA</p>","eval1":"<p style='color:green'>A</p>","auto2":"<p style='color:green'>A</p>","eval2":"EVA","auto3":"<p style='color:green'>A</p>","eval3":"<p style='color:green'>A</p>","progress":50,"_parentId":2},
+	{"id":22,"competance":"UTILISER LES OUTILS","auto1":"<p style='color:green'>A</p>","eval1":"<p style='color:red'>NA</p>","auto2":"<p style='color:green'>A</p>","eval2":"EVA","auto3":"<p style='color:green'>A</p>","eval3":"<p style='color:green'>A</p>","progress":20,"_parentId":2},
+	{"id":23,"competance":"Se situer dans un environnement","auto1":"<p style='color:green'>A</p>","eval1":"<p style='color:red'>NA</p>","auto2":"<p style='color:green'>A</p>","eval2":"EVA","auto3":"<p style='color:green'>A</p>","eval3":"<p style='color:green'>A</p>","progress":10,"_parentId":2}
+],"footer":[
+	{"name":"Total Persons:","persons":24,"iconCls":"icon-sum"}
+]}

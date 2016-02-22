@@ -1,0 +1,33 @@
+{"total":24,"rows":[
+
+
+	{"id":111,"classe":"2nd A","cursus":"Generale","filiere":"S"},
+	{"id":112,"classe":"2nd B","cursus":"Generale","filiere":"ES"},
+	{"id":113,"classe":"2nd C","cursus":"Generale","filiere":"ES"},
+	{"id":114,"classe":"2nd D","cursus":"Generale","filiere":"L"},
+	{"id":115,"classe":"2nd E","cursus":"Technologique","filiere":"STG"},
+	{"id":116,"classe":"2nd F","cursus":"Technologique","filiere":"STG"},
+	{"id":117,"classe":"2nd G","cursus":"Professionnel","filiere":"Commerce"},
+	{"id":118,"classe":"2nd E","cursus":"Professionnel","filiere":"Commerce"},
+
+	{"id":121,"classe":"Prem A","cursus":"Generale","filiere":"S"},
+	{"id":122,"classe":"Prem B","cursus":"Generale","filiere":"ES"},
+	{"id":123,"classe":"Prem C","cursus":"Generale","filiere":"L"},
+	{"id":124,"classe":"Prem D","cursus":"Technologique","filiere":"STG"},
+	{"id":125,"classe":"Prem E","cursus":"Technologique","filiere":"STG"},
+	{"id":126,"classe":"Prem F","cursus":"Technologique","filiere":"STG"},
+	{"id":127,"classe":"Prem G","cursus":"Professionnel","filiere":"Commerce"},
+	{"id":128,"classe":"Prem H","cursus":"Professionnel","filiere":"Commerce"},
+
+	{"id":131,"classe":"Term A","cursus":"Generale","filiere":"S"},
+	{"id":132,"classe":"Term B","cursus":"Generale","filiere":"ES"},
+	{"id":133,"classe":"Term C","cursus":"Generale","filiere":"L"},
+	{"id":134,"classe":"Term D","cursus":"Technologique","filiere":"STG"},
+	{"id":135,"classe":"Term E","cursus":"Technologique","filiere":"STG"},
+	{"id":136,"classe":"Term F","cursus":"Professionnel","filiere":"Commerce"},
+	{"id":137,"classe":"Term G","cursus":"Professionnel","filiere":"Commerce"},
+	{"id":138,"classe":"Term H","cursus":"Professionnel","filiere":"Commerce"}
+
+],"footer":[
+	{"name":"Total Persons:","persons":24,"iconCls":"icon-sum"}
+]}
