@@ -53,14 +53,12 @@
           <div class="middle_container_right">
               <div class="content">
                   <div class="frame_content default">
-                     <h1>Renseigner une évaluation</h1>
-
-<p>Cette page permet à l'enseignant de renseigner le résultat d'une évaluation de l'élève.<br>Le niveau affiché par matière est une moyenne classe.<br>Le tri est par matière/classe<br><b>Faut-il le voir plus par élève que par matière/classe?</b></p>
-
+                     <h1>Vos évaluations</h1>
 
 
 
 <br/>
+<!--
 <table>
   <td>
     <tr>
@@ -93,44 +91,325 @@
 
   </td>
 </table>
+-->
+
+
+<p><h2>Les évaluations à compléter</h2></p>
+
 
 <br/>
+<div id="" class="easyui-panel" title="Filtrer" 
+            style="width:100%;padding:10px;"
+            data-options="collapsible:true, collapsed:true">
+<p><b>Filtre sur les élèves</b></p>
+<br/>
+<form>
+  <label>Vos classes  <select style="width:200px;">
+      <option>Sélectionner une classe ...</option>
+      <option>Classe 2B</option>
+      <option>Classe 2C</option>
+       <option>Classe 1A</option>
+      <option>Classe 1B</option>
+      <option>Classe 1C</option>
+       <option>Classe TermA</option>
+      <option>Classe TermB</option>
+      <option>Classe TermC</option>
+    </select></label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <label>Vos matières  
+    <select style="width:200px;">
+      <option>Sélectionner une matière ...</option>
+      <option>Mathématiques</option>
+      <option>Physique</option>
+    </select></label>
+  <br> <br>
+  <table>
+    <tr>
+      <td>
+        Nom
+      </td>
+      <td>
+        <input/>
+      </td>
+    <tr>
+    <tr>
+      <td>
+        Prénom
+      </td>
+      <td>
+        <input/>
+      </td>
+    <tr>
+  </table>
+</form>
+</div>
 
 
+ 
+<br>
 <table class="easyui-datagrid" style="height:110px;width:100%;"
                       data-options="url:'datagrid_data.json',fitColumns:true,singleSelect:true">
                   <thead>
                       <tr>
                           <th data-options="field:'date'">Date</th>
-                          <th data-options="field:'eval'">Matière</th>
-                          <th data-options="field:'autoeval'">Classe</th>
-                          <th data-options="field:'comment'">Commentaire</th>
+                          <th data-options="field:'classe'">Classe</th>
+                          <th data-options="field:'eleve'">Manque évaluation</th>
+                          <th data-options="field:'eleve_auto'">Manque auto-évaluation</th>
+                          <th data-options="field:'matiere'">Matière</th>
+                          <th data-options="field:'competance'">Compétence</th>
+                          <th data-options="field:'capacite'">Capacité</th>
                       </tr>
                   </thead>
                   <tbody>
                       <tr>
                           <td data-options="field:'date'">19 mars 2015</td>
-                          <td data-options="field:'eval'"><div style="color:green">Aquis</div></td>
-                          <td data-options="field:'autoeval'" ><div style="color:green">(Aquis)</div></td>
-                          <td data-options="field:'comment'"></td>
+                          <td data-options="field:'classe'">1ere A S</td>
+                          <td data-options="field:'eleve'" ><div >6 élèves</div></td>
+                          <td data-options="field:'eleve_auto'" ><div >4 élèves</div></td>
+                          <td data-options="field:'matiere'"><div >Maths</div></td>
+                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'capacite'">Faire un raisonnement</td>
                       </tr>
                       <tr>
-                          <td data-options="field:'date'">15 fevrier 2015</td>
-                          <td data-options="field:'eval'"><div style="color:red">Non aquis</div></td>
-                          <td data-options="field:'autoeval'"><div style="color:green">(Aquis)</div></td>
-                          <td data-options="field:'comment'"></td>
+                          <td data-options="field:'date'">2 mars 2015</td>
+                          <td data-options="field:'classe'">1ere STGM</td>
+                          <td data-options="field:'eleve'" ><div >3 élèves</div></td>
+                          <td data-options="field:'eleve_auto'" ><div >3 élèves</div></td>
+                          <td data-options="field:'matiere'"><div >Maths</div></td>
+                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'capacite'">Faire un raisonnement</td>
                       </tr>
                       <tr>
-                          <td data-options="field:'date'">21 janvier 2015</td>
-                          <td data-options="field:'eval'"><div style="color:red">Non aquis</div></td>
-                          <td data-options="field:'autoeval'" ><div style="color:red">(Non aquis)</div></td>
-                          <td data-options="field:'comment'">Revoir le chapitre 1</td>
+                          <td data-options="field:'date'">25 fevrier 2015</td>
+                          <td data-options="field:'classe'">2eme Term Litéraire</td>
+                          <td data-options="field:'eleve'" ><div>23 élèves</div></td>
+                          <td data-options="field:'eleve_auto'" ><div>23 élèves</div></td>
+                          <td data-options="field:'matiere'"><div>Maths</div></td>
+                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'capacite'">Faire un raisonnement</td>
+                      </tr>
+                  </tbody>
+              </table>
+
+<br>
+ <!-- <div style="text-align:right"><a class="easyui-linkbutton"  href="#" target="_self">Voir details</a></div> -->
+ <!-- <div style="text-align:right"><button onclick="remplir_eval()">Evaluer</button></div> --> 
+ <div style="text-align:right"><a class="easyui-linkbutton"  href="evaluer_eleve.html" target="_self">Evaluer</a></div>
+<br><br>
+<p><h2>Les évaluations à repasser</h2></p>
+
+
+<br/>
+  <div id="" class="easyui-panel" title="Filtrer" 
+            style="width:100%;padding:10px;"
+            data-options="collapsible:true, collapsed:true">
+<p><b>Filtre sur les élèves</b></p>
+<br/>
+<form>
+  <label>Vos classes  <select style="width:200px;">
+      <option>Sélectionner une classe ...</option>
+      <option>Classe 2B</option>
+      <option>Classe 2C</option>
+       <option>Classe 1A</option>
+      <option>Classe 1B</option>
+      <option>Classe 1C</option>
+       <option>Classe TermA</option>
+      <option>Classe TermB</option>
+      <option>Classe TermC</option>
+    </select></label>&nbsp;&nbsp;&nbsp;&nbsp;
+  <label>Vos matières  
+    <select style="width:200px;">
+      <option>Sélectionner une matière ...</option>
+      <option>Mathématiques</option>
+      <option>Physique</option>
+    </select></label>
+  <br> <br>
+  <table>
+    <tr>
+      <td>
+        Nom
+      </td>
+      <td>
+        <input/>
+      </td>
+    <tr>
+    <tr>
+      <td>
+        Prénom
+      </td>
+      <td>
+        <input/>
+      </td>
+    <tr>
+  </table>
+</form>
+</div>
+
+<br>
+
+<table class="easyui-datagrid" style="height:110px;width:100%;">
+                  <thead>
+                      <tr >
+                          <th data-options="field:'checkbox'">Date</th>
+                          <th data-options="field:'date'">Date</th>
+                          <th data-options="field:'classe'">Classe</th>
+                          <th data-options="field:'eleve'">Elève</th>
+                          <th data-options="field:'matiere'">Matière</th>
+                          <th data-options="field:'competance'">Compétence</th>
+                          <th data-options="field:'capacite'">Capacité</th>
+                          <th data-options="field:'eval'">Evaluation</th>
+                          <th data-options="field:'auto_eval'">Auto-évaluation</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td data-options="field:'checkbox'"><input type="checkbox"></input></td>
+                          <td data-options="field:'date'">19 mars 2015</td>
+                          <td data-options="field:'classe'">1ere A S</td>
+                          <td data-options="field:'eleve'" ><div >Jean-Charle</div></td>
+                          <td data-options="field:'matiere'"><div >Maths</div></td>
+                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'capacite'">Faire un raisonnement</td>
+                          <td data-options="field:'eval'" ><div style="color:black;">En cours d'aquisition</div></td>
+                          <td data-options="field:'auto_eval'"><div style="color:black">Aquis</div></td>
+                      </tr>
+                      <tr>
+                          <td data-options="field:'checkbox'"><input type="checkbox"></input></td>
+                          <td data-options="field:'date'">2 mars 2015</td>
+                          <td data-options="field:'classe'">1ere STGM</td>
+                          <td data-options="field:'eleve'" ><div >Marie</div></td>
+                          <td data-options="field:'matiere'"><div >Maths</div></td>
+                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'capacite'">Faire un raisonnement</td>
+                          <td data-options="field:'eval'"><div style="color:black;">Fragile</div></td>
+                          <td data-options="field:'auto_eval'"><div style="color:black">Emergent</div></td>
+                      </tr>
+                      <tr>
+                          <td data-options="field:'checkbox'"><input type="checkbox"></input></td>
+                          <td data-options="field:'date'">25 fevrier 2015</td>
+                          <td data-options="field:'classe'">2eme Term Litéraire</td>
+                          <td data-options="field:'eleve'" ><div>Yoan</div></td>
+                          <td data-options="field:'matiere'"><div>Maths</div></td>
+                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'capacite'">Faire un raisonnement</td>
+                          <td data-options="field:'eval'"><div style="color:black">Absent</div></td>
+                          <td data-options="field:'auto_eval'"><div style="color:black"></div></td>
                       </tr>
                   </tbody>
               </table>
 
 
+<br>
+<div style="text-align:right"><button onclick="ajouter_eval()">Ajouter un examen</button></div>
+
+
+<div id="remplir_eval" hidden>
+<br>
+       <div style="text-align:right">
+            <a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'">Cancel</a>
+            <a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">Save</a>
+            <a id="btn" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-edit'">Edit</a>
+          </div>
+          <br>
+  <table class="easyui-datagrid">
+                      <tr>
+                          <th data-options="field:'eleve'">Elève</th>
+                          <th data-options="field:'eval'">Evaluation</th>
+                          <th data-options="field:'auto_eval'">Auto-évaluation</th>
+                      </tr>
+                      <tr>
+                          <td data-options="field:'eleve'" ><div >Jean-Charle</div></td>
+                          <td data-options="field:'eval'" ><div style="color:black;">En cours d'aquisition</div></td>
+                          <td data-options="field:'auto_eval'"><div style="color:black">Aquis</div></td>
+                      </tr>
+                      <tr>
+                          <td data-options="field:'eleve'" ><div >Marie</div></td>
+                          <td data-options="field:'eval'"><div style="color:black;">Fragile</div></td>
+                          <td data-options="field:'auto_eval'"><div style="color:black">Emergent</div></td>
+                      </tr>
+                      <tr>
+                          <td data-options="field:'eleve'" ><div>Yoan</div></td>
+                          <td data-options="field:'eval'"><div style="color:black">Absent</div></td>
+                          <td data-options="field:'auto_eval'"><div style="color:black"></div></td>
+                      </tr>
+              </table>
+</div>
+
+<div id="ajouter_eval" hidden>
+
+           <fieldset style="width:600px;margin:10px;padding:10px;"><legend>&nbsp;&nbsp;Capacité à évaluer&nbsp;&nbsp;</legend>
+        
+          <table style="width:100%;border:0px;">
+            <tr >
+              <td style="width:40%;">Matière</td>
+              <td style="width:70%;">Mathématique</td>
+            </tr>
+            <tr >
+              <td style="width:40%;padding-top:10px;">Compétances</td>
+              <td style="width:70%;">ANALYSER-RAISONNER</td>
+            </tr>
+            <tr >
+              <td style="width:40%;padding-top:10px;">Capacité</td>
+              <td style="width:70%;">Emettre une conjecture, une hypothèse</td>
+            </tr>
+            <tr >
+              <td style="width:40%;padding-top:10px;">Date</td>
+              <td style="width:70%;"><input type="text" value="27/05/2016"  Style="width:200px;"/></td>
+            </tr>
+          </table>
+          </fieldset>
+
+          <br>
+
+         <form style="margin:auto;" action="evaluationadd.html">
+
+          <fieldset style="width:600px;margin:10px;padding:10px;"><legend>&nbsp;&nbsp;Elèves concernés&nbsp;&nbsp;</legend><br>
+          <table style="width:100%;border:0px;">
+            <tr >
+              <td style="width:40%;">Classe</td>
+              <td style="width:70%;">Terminale A STMG</td>
+            </tr>
+            <tr >
+              <td style="width:40%;padding-top:10px;">Jean-Charle</td>
+              <td style="width:70%;"></td>
+            </tr>
+          </table>
+
+          </fieldset>
+          <br>
+
+          <center><br/>
+            <input type="submit" value="Ajouter">
+          </center>
+
+          </form>
+
+</div>
+
     <script type="text/javascript">
+
+function remplir_eval(){
+
+  $('#remplir_eval').dialog({
+      width:900,
+      height:550,
+      modal:true,
+      title:'Evaluation'
+
+  });
+  $('#remplir_eval').show();
+}
+
+function ajouter_eval(){
+
+  $('#ajouter_eval').dialog({
+      width:655,
+      height:400,
+      modal:true,
+      title:'Ajouter un examen'
+  });
+  $('#ajouter_eval').show();
+}
+
 
        var products = [
         {productid:'A',name:'A'},
@@ -189,7 +468,7 @@
                   </div>
              </div>
           </div>
-
+<!--
           <div class="push-float"></div>
     </div>
    <div class="news_letter">
@@ -197,7 +476,7 @@
    </div>
 
   <div class="border_bottom"></div>
-
+-->
 
 
 <div id="popup1" class="popup_block">

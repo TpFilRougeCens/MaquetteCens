@@ -45,50 +45,24 @@
           <div class="middle_container_right">
               <div class="content">
                   <div class="frame_content default">
-                     <h1>Ajouter une évaluation pour plusieurs élèves</h1>
+                     <h1>Ajouter un examen</h1>
                      
 
 
 
 
-
-                     <form style="margin:auto;" action="eleves/index.html">
-                      <fieldset style="width:600px;margin:10px;padding:10px;"><legend>&nbsp;&nbsp;Classe concernés&nbsp;&nbsp;</legend><br>
-                      <table style="width:100%;border:0px;">
-                      <tr><td style="width:30%">Classe</td><td style="width:70%">
-                        <select name="sometext" Style="width:200px;">
-                          <optgroup label="Terminale">
-                          <option>Terminale A STMG</option>
-                          <option>Terminale B ES</option>
-                          <option>Terminale B L</option>
-                          </optgroup>
-                          <optgroup label="Première">
-                          <option>Première A STMG</option>
-                          <option>Première B S</option>
-                          <option>Première C ES</option>
-                          </optgroup>
-                          <optgroup label="Seconde">
-                          <option>Seconde A STMG</option>
-                          <option>Seconde B S</option>
-                          <option>Seconde B L</option>
-                          </optgroup>
-                       </select>
-                      </td></tr>
-                      </table><br>
-                      </fieldset>
-<br>
                        <fieldset style="width:600px;margin:10px;padding:10px;"><legend>&nbsp;&nbsp;Evaluation à ajouter&nbsp;&nbsp;</legend>
                       <table style="width:100%;border:0px;padding:10px;">
-                      <tr><td style="width:30%">Matière</td><td style="width:70%">
+                      <tr><td style="width:30%;padding-bottom:20px;">Matière</td><td style="width:70%">
                         <select name="sometext"  Style="width:200px;">
                           <option>Mathématique</option>
                           <option>Français</option>
                           <option>Anglais</option>
                           <option>SVT</option>
                           <option>Sport</option>
-                       </select>
+                        </select>
                       </td></tr>
-                      <tr><td style="width:30%">Capacité</td><td style="width:70%">
+                      <tr><td style="width:30%;padding-bottom:20px;">Capacité</td><td style="width:70%">
                         <select name="sometext"  Style="width:200px;">
                           <optgroup label="ANALYSER-RAISONNER">
                             <option>Emettre une conjecture, une hypothèse</option>
@@ -106,10 +80,62 @@
                       
                       </table>
                       </fieldset>
+
+                      <br>
+
+                     <form style="margin:auto;" action="evaluationadd.html">
+
+                      <fieldset style="width:600px;margin:10px;padding:10px;"><legend>&nbsp;&nbsp;Elèves concernés&nbsp;&nbsp;</legend><br>
+                      <table style="width:100%;border:0px;">
+                      <tr ><td style="width:40%;padding-bottom:20px;">Classe</td><td style="width:70%;">
+                            <select name="sometext" Style="width:200px;">
+                              <optgroup label="Terminale">
+                              <option>Terminale A STMG</option>
+                              <option>Terminale B ES</option>
+                              <option>Terminale B L</option>
+                              </optgroup>
+                              <optgroup label="Première">
+                              <option>Première A STMG</option>
+                              <option>Première B S</option>
+                              <option>Première C ES</option>
+                              </optgroup>
+                              <optgroup label="Seconde">
+                              <option>Seconde A STMG</option>
+                              <option>Seconde B S</option>
+                              <option>Seconde B L</option>
+                              </optgroup>
+                            </select>
+                          </td>
+                        </tr>
+                      </table><br>
+
+                          <div style="padding-bottom:20px;">(4 élèves n'ont pas validés cette capacité et seront ajouté à celle-ci)</div>
+                          <div>
+                            <table>
+                              <tr>
+                                <td>
+                                  <input type=checkbox></input>
+                                </td>
+                                <td>Jean-Charles
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>
+                                  <input type=checkbox></input>
+                                </td>
+                                <td>Yoan
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                      </fieldset>
+<br>
+
                       <center><br/>
-                                <input type="submit" value="valider">
-                            
-                            </center>
+                        <input type="submit" value="Ajouter">
+                      </center>
+
+
                       </form>
 
 
@@ -122,7 +148,7 @@
                   </div>
              </div>
           </div>
-
+<!--
           <div class="push-float"></div>
     </div> 
    <div class="news_letter">
@@ -130,7 +156,7 @@
    </div>
    
   <div class="border_bottom"></div>
-  
+  -->
 
 
 <div id="popup1" class="popup_block">
