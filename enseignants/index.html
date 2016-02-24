@@ -86,14 +86,111 @@
           <div class="middle_container_right">
               <div class="content">
                   <div class="frame_content default">
-                     <h1>Statisques et Analyses globales</h1>
-                    
-<svg class="chart"></svg>
+                     <h1>Vitesse d'acquisition des compétances</h1>
+                   <h3>Elève(s) à évaluer</h3>
+                   <br>
+ <form>
+<input type="radio" name="gender" onclick="$('#filtre-eleve').show('slow');$('#filtre-classe').hide('slow');$('#filtre-niveau').hide('slow');"> Un élève&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="gender" onclick="$('#filtre-eleve').hide('slow');$('#filtre-classe').show('slow');$('#filtre-niveau').hide('slow');"> Une classe
+&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="radio" name="gender" onclick="$('#filtre-eleve').hide('slow');$('#filtre-classe').hide('slow');$('#filtre-niveau').show('slow');"> Tous vos élèves
+                  </form>
+  <br>  
 
+<div id="filtre-eleve" hidden>
+ <table>
+    <tr>
+      <td>
+        Nom
+      </td>
+      <td>
+        <input/>
+      </td>
+    <tr>
+    <tr>
+      <td>
+        Prénom
+      </td>
+      <td>
+        <input/>
+      </td>
+    <tr>
+  </table>
+</div>
+<div id="filtre-classe" hidden>
+  
+<form>
+  <label>Vos classes  <select style="width:200px;">
+      <option>Sélectionner une classe ...</option>
+      <option>Classe 2B</option>
+      <option>Classe 2C</option>
+       <option>Classe 1A</option>
+      <option>Classe 1B</option>
+      <option>Classe 1C</option>
+       <option>Classe TermA</option>
+      <option>Classe TermB</option>
+      <option>Classe TermC</option>
+    </select></label>&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+  
+</form>
+</div>
+<div id="filtre-niveau" hidden>
+ 
+
+</div>
+ <br> 
+
+<table>
+  <tr>
+    <td>
+      <h3 style="padding-right:50px;">A comparer avec </h3> 
+    </td>
+    <td >
+      <form>
+        <input type="radio" name="gender" > sa classe (si élève)&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" > son niveau et sa filière&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="gender" > son niveau toute filière&nbsp;&nbsp;&nbsp;&nbsp;
+      </form>
+    </td>
+  <tr>
+<table>
+<br>
+ <label> <h3>Filtrer</h3> <br>
+    <select style="width:200px;display:inline-block;text-align: right;">
+      <option>Sélectionner une matière ...</option>
+      <option>Mathématiques</option>
+      <option>Physique</option>
+    </select></label>
+ &nbsp;&nbsp;&nbsp;&nbsp;
+ <select name="sometext"  Style="width:200px;">
+                         <optgroup label="">
+                           <option>Sélectionnez une compétance...</option>
+                          </optgroup>
+                          <optgroup label="ANALYSER-RAISONNER">
+                            <option>Emettre une conjecture, une hypothèse</option>
+                            <option>Proposer une méthode de résolution, un protocole expérimental</option>
+                            <option>Analyser-raisonner</option>
+                            <option>Critiquer un résultat, argumenter</option>
+                          </optgroup>
+                          <optgroup label="REALISER">
+                             <option>...</option>
+                          </optgroup>
+                       </select>
+
+<br><br><br>
+<svg class="chart"></svg><br><br>
+<h3>Nombre moyen d'évaluations nécessaire pour l'acquisition de la compétance</h3> 
 
                   </div>
              </div>
           </div>
+
+              <br> <br>
+   <button style="width:25px;">1</button>&nbsp; <button style="width:25px;">2</button>&nbsp;&nbsp; ... &nbsp;&nbsp; <button style="width:25px;">9</button>
+
+
+
 <!--
           <div class="push-float"></div>
     </div>
@@ -125,17 +222,21 @@ $(document).ready(function(){
 
 var data = {
   labels: [
-    'resilience', 'maintainability', 'accessibility',
-    'uptime', 'functionality', 'impact'
+    'S\'APPROPRIER - Rechercher, extraire et organiser ...', 
+    'ENTRER DANS L\'ECHANGE - Rédiger une argumentation.',
+     'Devenir un lecteur compétent et critique - Situer...',
+    'S’INFORMER-SE DOCUMENTER - Rechercher l’information',
+     'S’INFORMER-SE DOCUMENTER - Décoder l’information',
+     'COMMUNIQUER - Utiliser un langage adapté'
   ],
   series: [
     {
-      label: '2012',
-      values: [4, 8, 15, 16, 23, 42]
+      label: 'Vos élèves',
+      values: [8.1, 6.3, 5.6, 5.8, 4.2, 4.1]
     },
     {
-      label: '2013',
-      values: [12, 43, 22, 11, 73, 25]
+      label: 'Le niveau',
+      values: [6.6, 5.4, 6.1, 7.2, 4.2, 5.5]
     }]
 };
 
@@ -143,7 +244,7 @@ var chartWidth       = 300,
     barHeight        = 20,
     groupHeight      = barHeight * data.series.length,
     gapBetweenGroups = 10,
-    spaceForLabels   = 150,
+    spaceForLabels   = 350,
     spaceForLegend   = 150;
 
 // Zip the series data together (first values, second values, etc.)
