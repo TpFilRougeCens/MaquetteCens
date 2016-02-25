@@ -938,3 +938,27 @@ BLOC DETAIL
 	background:url('../image/timer.png') no-repeat center center;
 		background-size: 16px 16px;
 }
+
+
+
+
+
+/*
+STATS CHART JS
+-------------------------------*/
+
+
+
+ul.bar-legend li {
+	list-style: none;
+	margin:10px;
+}
+
+ul.bar-legend li span {
+		margin:0px 5px -5px 5px;
+    width: 30px;
+    height: 20px;
+    display: inline-block;
+	background-size: 80px 60px;
+
+}
