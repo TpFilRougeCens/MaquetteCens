@@ -56,7 +56,6 @@
                      <h1>Vos évaluations</h1>
 
 
-
 <br/>
 <!--
 <table>
@@ -64,7 +63,7 @@
     <tr>
     <form>
       <select style="width:200px;">
-          <option>Classe 2A</option>
+          <option><span style="color:grey;">Sélectionner une classe...</span></option>
           <option>Classe 2B</option>
           <option>Classe 2C</option>
            <option>Classe 1A</option>
@@ -79,8 +78,8 @@
     </tr>
       <tr>
       <form>
-        <select style="width:200px; color:grey;">
-            <option >Selectionner un élève...</option>
+        <select style="width:200px;">
+            <option  style="color:grey;">Selectionner un élève...</option>
             <option>Jean Dupond</option>
             <option>Anne Bouvier</option>
             <option>...</option>
@@ -155,7 +154,7 @@
                           <th data-options="field:'eleve'">Manque évaluation</th>
                           <th data-options="field:'eleve_auto'">Manque auto-évaluation</th>
                           <th data-options="field:'matiere'">Matière</th>
-                          <th data-options="field:'competance'">Compétence</th>
+                          <th data-options="field:'competence'">Compétence</th>
                           <th data-options="field:'capacite'">Capacité</th>
                       </tr>
                   </thead>
@@ -166,7 +165,7 @@
                           <td data-options="field:'eleve'" ><div >6 élèves</div></td>
                           <td data-options="field:'eleve_auto'" ><div >4 élèves</div></td>
                           <td data-options="field:'matiere'"><div >Maths</div></td>
-                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'competence'">ANALYSER</td>
                           <td data-options="field:'capacite'">Faire un raisonnement</td>
                       </tr>
                       <tr>
@@ -175,7 +174,7 @@
                           <td data-options="field:'eleve'" ><div >3 élèves</div></td>
                           <td data-options="field:'eleve_auto'" ><div >3 élèves</div></td>
                           <td data-options="field:'matiere'"><div >Maths</div></td>
-                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'competence'">ANALYSER</td>
                           <td data-options="field:'capacite'">Faire un raisonnement</td>
                       </tr>
                       <tr>
@@ -184,7 +183,7 @@
                           <td data-options="field:'eleve'" ><div>23 élèves</div></td>
                           <td data-options="field:'eleve_auto'" ><div>23 élèves</div></td>
                           <td data-options="field:'matiere'"><div>Maths</div></td>
-                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'competence'">ANALYSER</td>
                           <td data-options="field:'capacite'">Faire un raisonnement</td>
                       </tr>
                   </tbody>
@@ -254,7 +253,7 @@
                           <th data-options="field:'classe'">Classe</th>
                           <th data-options="field:'eleve'">Elève</th>
                           <th data-options="field:'matiere'">Matière</th>
-                          <th data-options="field:'competance'">Compétence</th>
+                          <th data-options="field:'competence'">Compétence</th>
                           <th data-options="field:'capacite'">Capacité</th>
                           <th data-options="field:'eval'">Evaluation</th>
                           <th data-options="field:'auto_eval'">Auto-évaluation</th>
@@ -267,7 +266,7 @@
                           <td data-options="field:'classe'">1ere A S</td>
                           <td data-options="field:'eleve'" ><div >Jean-Charle</div></td>
                           <td data-options="field:'matiere'"><div >Maths</div></td>
-                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'competence'">ANALYSER</td>
                           <td data-options="field:'capacite'">Faire un raisonnement</td>
                           <td data-options="field:'eval'" ><div style="color:black;">En cours d'aquisition</div></td>
                           <td data-options="field:'auto_eval'"><div style="color:black">Aquis</div></td>
@@ -278,7 +277,7 @@
                           <td data-options="field:'classe'">1ere STGM</td>
                           <td data-options="field:'eleve'" ><div >Marie</div></td>
                           <td data-options="field:'matiere'"><div >Maths</div></td>
-                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'competence'">ANALYSER</td>
                           <td data-options="field:'capacite'">Faire un raisonnement</td>
                           <td data-options="field:'eval'"><div style="color:black;">Fragile</div></td>
                           <td data-options="field:'auto_eval'"><div style="color:black">Emergent</div></td>
@@ -289,10 +288,11 @@
                           <td data-options="field:'classe'">2eme Term Litéraire</td>
                           <td data-options="field:'eleve'" ><div>Yoan</div></td>
                           <td data-options="field:'matiere'"><div>Maths</div></td>
-                          <td data-options="field:'competance'">ANALYSER</td>
+                          <td data-options="field:'competence'">ANALYSER</td>
                           <td data-options="field:'capacite'">Faire un raisonnement</td>
                           <td data-options="field:'eval'"><div style="color:black">Absent</div></td>
                           <td data-options="field:'auto_eval'"><div style="color:black"></div></td>
+
                       </tr>
                   </tbody>
               </table>
@@ -344,7 +344,7 @@
               <td style="width:70%;">Mathématique</td>
             </tr>
             <tr >
-              <td style="width:40%;padding-top:10px;">Compétances</td>
+              <td style="width:40%;padding-top:10px;">Compétences</td>
               <td style="width:70%;">ANALYSER-RAISONNER</td>
             </tr>
             <tr >
